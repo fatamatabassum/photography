@@ -6,27 +6,25 @@
   <title>Fatama Focus — Hijabi-Centered Photography</title>
   <meta name="description" content="A women-centered photography space created for hijabi women. Private, respectful, and intentional sessions." />
 
-  <!-- Optional: Google Fonts (safe to remove if you want fully offline) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      /* Loire-ish editorial base */
+      /* Editorial base */
       --ink:#151515;
       --muted:rgba(21,21,21,.62);
       --line:rgba(21,21,21,.14);
       --paper:#fffdf8;
 
-     /* Warm desi/arabic palette */
---saffron:#ffb703;   /* yellow */
---marigold:#ff9f1c;  /* orange */
---vermilion:#e63946; /* red */
---pomegranate:#b11226; /* deep red */
---olive:#6a994e;     /* green */
---jade:#2a9d8f;      /* green-teal */
-
+      /* Warm desi/arabic palette (reds, oranges, greens, yellow) */
+      --saffron:#ffb703;      /* yellow */
+      --marigold:#ff9f1c;     /* orange */
+      --vermilion:#e63946;    /* red */
+      --pomegranate:#b11226;  /* deep red */
+      --olive:#6a994e;        /* green */
+      --jade:#2a9d8f;         /* green-teal */
 
       --radius:22px;
       --shadow: 0 16px 44px rgba(0,0,0,.10);
@@ -46,22 +44,21 @@
       font-family:var(--sans);
       -webkit-font-smoothing:antialiased;
       text-rendering:optimizeLegibility;
-
-      /* Colorful, desi/arabic vibe without being loud */
-      background:
-  radial-gradient(900px 520px at 12% 10%, rgba(255,159,28,.30), transparent 60%),
-  radial-gradient(900px 520px at 82% 0%, rgba(230,57,70,.26), transparent 62%),
-  radial-gradient(900px 520px at 88% 78%, rgba(255,183,3,.24), transparent 62%),
-  radial-gradient(900px 520px at 12% 92%, rgba(106,153,78,.26), transparent 62%),
-  linear-gradient(180deg, rgba(255,253,248,.88), rgba(255,253,248,.94)),
-  #f7f2ea;
       overflow-x:hidden;
+
+      background:
+        radial-gradient(900px 520px at 12% 10%, rgba(255,159,28,.30), transparent 60%),
+        radial-gradient(900px 520px at 82% 0%, rgba(230,57,70,.26), transparent 62%),
+        radial-gradient(900px 520px at 88% 78%, rgba(255,183,3,.24), transparent 62%),
+        radial-gradient(900px 520px at 12% 92%, rgba(106,153,78,.26), transparent 62%),
+        linear-gradient(180deg, rgba(255,253,248,.88), rgba(255,253,248,.94)),
+        #f7f2ea;
     }
 
     a{color:inherit; text-decoration:none}
     .container{max-width:var(--container); margin:0 auto; padding:0 var(--pad);}
 
-    /* ====== Top bar ====== */
+    /* Top bar */
     .topbar{
       position:sticky; top:0; z-index:50;
       backdrop-filter: blur(16px);
@@ -80,13 +77,7 @@
     }
     .brandMark{
       width:12px; height:12px; border-radius:999px;
-      background: linear-gradient(
-  135deg,
-  var(--vermilion),
-  var(--marigold),
-  var(--saffron),
-  var(--olive)
-);
+      background: linear-gradient(135deg, var(--vermilion), var(--marigold), var(--saffron), var(--olive));
       box-shadow: 12px 0 0 rgba(21,21,21,.22);
       transform: translateY(-1px);
     }
@@ -143,26 +134,24 @@
     .btn.primary{
       border-color: transparent;
       color: #111;
-      .btn.primary{
-  background: linear-gradient(
-    135deg,
-    rgba(230,57,70,.95),
-    rgba(255,159,28,.95),
-    rgba(255,183,3,.95),
-    rgba(106,153,78,.95)
-  );
-}
+      background: linear-gradient(
+        135deg,
+        rgba(230,57,70,.95),
+        rgba(255,159,28,.95),
+        rgba(255,183,3,.95),
+        rgba(106,153,78,.95)
+      );
+    }
     .btn.primary:hover{
       transform: translateY(-1px) scale(1.01);
       filter:saturate(1.06);
     }
 
-    /* ====== Decorative arabesque-ish pattern layer ====== */
+    /* Decorative dot pattern (subtle) */
     .pattern{
       position:absolute; inset:-40px;
       pointer-events:none;
-      opacity:.12;
-      filter: blur(.2px);
+      opacity:.10;
       background-image:
         radial-gradient(circle at 16px 16px, rgba(21,21,21,.9) 2px, transparent 2.5px),
         radial-gradient(circle at 48px 48px, rgba(21,21,21,.65) 2px, transparent 2.5px);
@@ -171,7 +160,7 @@
       -webkit-mask-image: radial-gradient(600px 360px at 50% 10%, #000 10%, transparent 70%);
     }
 
-    /* ====== Hero ====== */
+    /* Hero */
     .hero{
       position:relative;
       padding: clamp(44px, 5.5vw, 84px) 0 26px;
@@ -198,7 +187,7 @@
     }
     .kdot{
       width:8px; height:8px; border-radius:999px;
-      background: linear-gradient(135deg, var(--cobalt), var(--plum), var(--rose));
+      background: linear-gradient(135deg, var(--vermilion), var(--marigold), var(--saffron));
     }
 
     h1{
@@ -221,14 +210,15 @@
       margin-top: 18px;
     }
 
-    /* Glassy highlight card */
+    /* Glass highlight card */
     .glass{
       border:1px solid rgba(255,255,255,.35);
       border-top-color: rgba(255,255,255,.55);
       background:
-        radial-gradient(1200px 520px at 20% 0%, rgba(255,159,28,.30), transparent 55%),
-        radial-gradient(1200px 520px at 100% 0%, rgba(45,91,255,.18), transparent 58%),
-        radial-gradient(1200px 520px at 80% 90%, rgba(255,61,138,.16), transparent 58%),
+        radial-gradient(1200px 520px at 20% 0%, rgba(255,159,28,.26), transparent 55%),
+        radial-gradient(1200px 520px at 100% 0%, rgba(230,57,70,.18), transparent 58%),
+        radial-gradient(1200px 520px at 80% 90%, rgba(255,183,3,.16), transparent 58%),
+        radial-gradient(1200px 520px at 10% 95%, rgba(106,153,78,.14), transparent 58%),
         rgba(255,253,248,.58);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
@@ -278,7 +268,7 @@
     }
     .miniRow strong{color:var(--ink); font-weight:600}
 
-    /* ====== Section headers ====== */
+    /* Sections */
     section{padding: 30px 0}
     .sectionHead{
       display:flex;
@@ -303,7 +293,7 @@
       line-height:1.5;
     }
 
-    /* ====== Work / session cards ====== */
+    /* Cards */
     .grid{
       margin-top: 16px;
       display:grid;
@@ -335,9 +325,10 @@
       position:relative;
       overflow:hidden;
       background:
-        radial-gradient(1000px 240px at 0% 0%, rgba(255,159,28,.35), transparent 55%),
-        radial-gradient(1000px 240px at 100% 0%, rgba(45,91,255,.24), transparent 58%),
-        radial-gradient(1000px 240px at 70% 110%, rgba(230,57,70,.18), transparent 58%),
+        radial-gradient(1000px 240px at 0% 0%, rgba(255,159,28,.32), transparent 55%),
+        radial-gradient(1000px 240px at 100% 0%, rgba(230,57,70,.22), transparent 58%),
+        radial-gradient(1000px 240px at 70% 110%, rgba(255,183,3,.18), transparent 58%),
+        radial-gradient(1000px 240px at 0% 110%, rgba(106,153,78,.16), transparent 58%),
         linear-gradient(135deg, rgba(21,21,21,.10), rgba(21,21,21,.02));
     }
     .thumb img{
@@ -346,13 +337,12 @@
       object-fit:cover;
       opacity:.92;
       transform: scale(1.05);
-      filter:saturate(1.05) contrast(1.02);
+      filter:saturate(1.06) contrast(1.02);
       transition: transform .7s ease;
       will-change: transform;
     }
     .card:hover .thumb img{transform: scale(1.10) translateY(-2px);}
 
-    /* Overlay pill */
     .pill{
       position:absolute;
       left: 14px; bottom: 14px;
@@ -362,16 +352,15 @@
       border-radius: 999px;
       padding: 7px 10px;
       background:
-      linear-gradient(
-      135deg,
-      rgba(255,159,28,.35),
-      rgba(255,183,3,.35),
-      rgba(106,153,78,.35)
-    );
-}
+        linear-gradient(
+          135deg,
+          rgba(255,159,28,.28),
+          rgba(255,183,3,.26),
+          rgba(106,153,78,.26)
+        );
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      color: rgba(21,21,21,.78);
+      color: rgba(21,21,21,.82);
     }
 
     .cardBody{padding: 14px;}
@@ -398,7 +387,7 @@
       color: rgba(21,21,21,.80);
     }
 
-    /* ====== Gallery (scroll transitions + parallax) ====== */
+    /* Gallery */
     .gallery{
       margin-top: 16px;
       display:grid;
@@ -427,6 +416,7 @@
       will-change: transform;
     }
     .shot:hover img{transform: translateY(-6px) scale(1.08);}
+
     .shotCap{
       position:absolute;
       left: 14px; right: 14px; bottom: 14px;
@@ -451,7 +441,7 @@
     }
     .shotCap span{font-size:12px; color: var(--muted)}
 
-    /* ====== Booking form ====== */
+    /* Booking form */
     .formWrap{
       margin-top: 16px;
       display:grid;
@@ -494,21 +484,23 @@
       font: inherit;
       font-size: 14px;
       outline:none;
-      transition: border-color .18s ease, background .18s ease, transform .18s ease;
+      transition: border-color .18s ease, background .18s ease;
     }
     textarea{min-height: 120px; resize: vertical;}
     input:focus, select:focus, textarea:focus{
-      border-color: rgba(45,91,255,.45);
+      border-color: rgba(230,57,70,.45);
       background: rgba(255,255,255,.55);
     }
     .formActions{display:flex; flex-wrap:wrap; gap:10px; margin-top: 8px;}
+
     .helperCard{
       padding: 16px;
       border-radius: var(--radius);
       border:1px solid var(--line);
       background:
-        radial-gradient(900px 420px at 10% 0%, rgba(255,177,0,.18), transparent 60%),
-        radial-gradient(900px 420px at 95% 0%, rgba(123,60,255,.14), transparent 62%),
+        radial-gradient(900px 420px at 10% 0%, rgba(255,159,28,.18), transparent 60%),
+        radial-gradient(900px 420px at 95% 0%, rgba(230,57,70,.14), transparent 62%),
+        radial-gradient(900px 420px at 10% 100%, rgba(106,153,78,.14), transparent 62%),
         rgba(255,253,248,.66);
       box-shadow: 0 12px 34px rgba(0,0,0,.08);
     }
@@ -532,7 +524,7 @@
       line-height:1.6;
     }
 
-    /* ====== Footer ====== */
+    /* Footer */
     footer{
       padding: 34px 0 40px;
       border-top: 1px solid var(--line);
@@ -549,7 +541,7 @@
       border-bottom: 1px solid rgba(21,21,21,.22);
     }
 
-    /* ====== Scroll transitions (Loire-like reveal) ====== */
+    /* Scroll reveal */
     .reveal{
       opacity:0;
       transform: translateY(18px) scale(.985);
@@ -566,13 +558,11 @@
       filter: blur(0);
     }
 
-    /* Slight stagger helpers */
     .d1{transition-delay:.06s}
     .d2{transition-delay:.12s}
     .d3{transition-delay:.18s}
     .d4{transition-delay:.24s}
 
-    /* Reduce motion */
     @media (prefers-reduced-motion: reduce){
       .reveal, .reveal.in{
         opacity:1 !important;
@@ -647,7 +637,7 @@
               <div class="miniList">
                 <div class="miniRow"><strong>For hijabi women</strong><span>soft + respectful direction</span></div>
                 <div class="miniRow"><strong>Privacy options</strong><span>no posting without permission</span></div>
-                <div class="miniRow"><strong>Vibe</strong><span>desi/arabic color, editorial calm</span></div>
+                <div class="miniRow"><strong>Vibe</strong><span>reds · oranges · greens · gold</span></div>
               </div>
 
               <div style="display:flex; gap:10px; flex-wrap:wrap;">
@@ -660,20 +650,18 @@
       </div>
     </section>
 
-    <!-- Sessions -->
     <section id="sessions">
       <div class="container">
         <div class="sectionHead reveal">
           <div>
             <h2>Sessions</h2>
-            <p>Loire-style structure—clear options, calm text, and colorful accents.</p>
+            <p>Clear options, calm structure, and color-forward accents.</p>
           </div>
         </div>
 
         <div class="grid">
           <article class="card reveal d1">
             <div class="thumb">
-              <!-- Replace src with your real images in /images -->
               <img src="https://images.unsplash.com/photo-1520975682031-aeaa8ccdbb7a?auto=format&fit=crop&w=1400&q=80" alt="Portrait session photo" />
               <span class="pill">Portrait</span>
             </div>
@@ -717,13 +705,12 @@
       </div>
     </section>
 
-    <!-- Gallery -->
     <section id="gallery">
       <div class="container">
         <div class="sectionHead reveal">
           <div>
             <h2>Gallery</h2>
-            <p>Scroll for smooth reveals on both text and photos. Replace the placeholders with your work.</p>
+            <p>Replace these placeholders with your work (recommended: put images in /images and change src).</p>
           </div>
         </div>
 
@@ -744,7 +731,7 @@
             <figcaption class="shotCap">
               <div>
                 <strong>Color, but elegant</strong><br>
-                <span>desi/arabic palette · editorial</span>
+                <span>gold · red · green</span>
               </div>
               <span class="chip">Creative</span>
             </figcaption>
@@ -766,7 +753,7 @@
             <figcaption class="shotCap">
               <div>
                 <strong>Respect-first</strong><br>
-                <span>boundaries honored · always</span>
+                <span>boundaries honored</span>
               </div>
               <span class="chip">Studio</span>
             </figcaption>
@@ -775,13 +762,12 @@
       </div>
     </section>
 
-    <!-- Values / How it works -->
     <section id="values">
       <div class="container">
         <div class="sectionHead reveal">
           <div>
             <h2>How it works</h2>
-            <p>Clear, calm, and consent-led. You control what’s shared, how you pose, and how you’re photographed.</p>
+            <p>Clear, calm, consent-led. You control what’s shared, how you pose, and how you’re photographed.</p>
           </div>
         </div>
 
@@ -819,19 +805,16 @@
       </div>
     </section>
 
-    <!-- Booking -->
     <section id="book">
       <div class="container">
         <div class="sectionHead reveal">
           <div>
             <h2>Book / Inquire</h2>
-            <p>This form can send to your email using Formspree (easy). Or swap it to a simple mailto link.</p>
+            <p>Use Formspree to make this form send to your email, or use the email button.</p>
           </div>
         </div>
 
         <div class="formWrap">
-          <!-- FORM: replace action with your Formspree endpoint -->
-          <!-- Get one: https://formspree.io/ then paste it below (e.g., https://formspree.io/f/abcdwxyz) -->
           <form class="reveal d1" action="#" method="POST" onsubmit="return handleForm(event)">
             <div class="fieldRow two">
               <div>
@@ -878,19 +861,19 @@
             </div>
 
             <p style="margin:10px 0 0; color:var(--muted); font-size:12px; line-height:1.5;">
-              If you keep the form action as “#”, it won’t send. Use Formspree to make it real.
+              If you keep the form action as “#”, it won’t send. Use Formspree and paste your endpoint into action="".
             </p>
           </form>
 
           <aside class="helperCard reveal d2">
             <h3>What you can expect</h3>
             <p>
-              This is a hijabi-centered photography experience—built around comfort and respect.
-              We can keep everything private. You can also request women-only spaces/settings.
+              A hijabi-centered photography experience—built around comfort and respect.
+              We can keep everything private. Posting only happens with your permission.
             </p>
             <ul class="bullets">
               <li>Posing prompts that work with modest outfits</li>
-              <li>Color-forward styling (desi/arabic palette) while still editorial</li>
+              <li>Warm, color-forward styling (gold/red/green) while staying editorial</li>
               <li>No sharing without clear permission</li>
               <li>Gentle pacing + breaks whenever you want</li>
             </ul>
@@ -908,9 +891,7 @@
       <div class="container">
         <div class="foot">
           <span>© <span id="year"></span> Fatama Focus</span>
-          <span>
-            <a href="mailto:fatamasfocus@gmail.com">fatamasfocus@gmail.com</a>
-          </span>
+          <span><a href="mailto:fatamasfocus@gmail.com">fatamasfocus@gmail.com</a></span>
         </div>
       </div>
     </footer>
@@ -932,7 +913,7 @@
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Loire-like reveal on scroll (text + photos)
+    // Reveal on scroll
     const io = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('in');
@@ -941,7 +922,7 @@
 
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-    // Light parallax on gallery images (smooth, not dizzy)
+    // Light parallax on gallery images
     const parallaxItems = [...document.querySelectorAll('[data-parallax]')];
     function onScroll(){
       const vh = window.innerHeight;
@@ -949,8 +930,8 @@
         const rect = card.getBoundingClientRect();
         const strength = parseFloat(card.dataset.parallax || "0.15");
         const center = rect.top + rect.height/2;
-        const delta = (center - vh/2) / (vh/2); // -1..1
-        const y = delta * -18 * strength;       // px
+        const delta = (center - vh/2) / (vh/2);
+        const y = delta * -18 * strength;
         const img = card.querySelector('img');
         if (img) img.style.transform = `translateY(${y}px) scale(1.05)`;
       });
@@ -959,13 +940,13 @@
     window.addEventListener('resize', onScroll);
     onScroll();
 
-    // Glass reacts to mouse movement (subtle)
+    // Glass reacts to mouse movement
     const glass = document.getElementById('mouseGlass');
     if (glass){
       glass.addEventListener('mousemove', (e) => {
         const r = glass.getBoundingClientRect();
-        const x = (e.clientX - r.left) / r.width;  // 0..1
-        const y = (e.clientY - r.top) / r.height;  // 0..1
+        const x = (e.clientX - r.left) / r.width;
+        const y = (e.clientY - r.top) / r.height;
         const rx = (y - 0.5) * -6;
         const ry = (x - 0.5) *  8;
         glass.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-1px)`;
@@ -975,12 +956,12 @@
       });
     }
 
-    // Form handler: prevents submit while action="#" so it doesn't "look broken"
+    // Prevent submit if action="#"
     function handleForm(e){
       const form = e.target;
       if (form.getAttribute('action') === '#'){
         e.preventDefault();
-        alert("Your form is ready—now connect it:\n\n1) Go to formspree.io\n2) Create a form\n3) Paste your Formspree action URL into the form's action attribute.\n\nOr use the Email instead button.");
+        alert("Form is ready—connect it with Formspree:\n\n1) Go to formspree.io\n2) Create a form\n3) Paste your endpoint into action=\"...\" in the <form> tag.\n\nOr use the Email instead button.");
         return false;
       }
       return true;
